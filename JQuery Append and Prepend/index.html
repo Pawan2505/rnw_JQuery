@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Append and Prepend</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+          #heading {
+        text-align: center;
+    }
+
+    #container {
+        border: 1px solid black;
+        background-color: antiquewhite;
+        margin: 50px auto;
+        padding: 50px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JQuery Append and Prepend</h1>
+
+       <div id="container">
+        <h1 class="text">Append and Prepend</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit ad fuga tenetur omnis consectetur
+            temporibus iste. Consequatur, alias. Veniam.</p>
+    </div>
+  
+    <ul>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+    </ul>
+
+    <ol>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Lorem ipsum dolor sit.</li>
+    </ol>
+   
+    <button id="appendbtn">Append</button>
+    <button id="prependbtn">Prepend</button>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("#appendbtn").click(function(){
+                $('#appendbtn').click(function(){
+                    $('#container').append("<h2>Hello Bhai</h2>");
+                });
+
+                $('#prependbtn').click(function(){
+                    $('#container').prepend(" Hey Bro");
+                });
+            });
+        })
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+            $('#appendbtn').click(function(){
+                $('ol').append("<li>List item new </li>");
+            });
+
+            $('#prependbtn').click(function(){
+                $('ol').prepend("<h3>Hello world!</h3>");
+            });
+        });
+    </script>
+</body>
+</html>

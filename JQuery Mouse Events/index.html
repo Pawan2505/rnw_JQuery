@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Mouse Events</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        #eventBox{
+            border: 1px solid black;
+            background-color: antiquewhite;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Mouse Event.</h1>
+    <!-- .click()
+    .dblclick()
+    .contextmenu()
+    .mouseenter()
+    .mouseleave() -->
+
+    <div id="eventBox" class="testBox">
+        <h2>JQuery Event Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dicta?</p>
+    </div>
+<!-- Note : 
+1. JQuery me jo bhee kaam hota hai o function me hota hai.
+2.abhi ham kya hahte hai ki jab ham div box pr click kre uska color change ho jaye.
+3. Apne dekha ki kaise maine single click se div k box ka color hange kr diya.
+    
+<script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                $('#eventBox').css('background-color','red');
+            });
+        });
+        
+    </script>
+
+-->
+
+
+    <!-- Note: 
+    1. Ab App yaha dekh pa rhe hoge ki hamne single click kiya div k box pr aur 
+    pura HTML code console me show kr raha hai.
+
+    <script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                // $('#eventBox').css('background-color','red');
+
+                var a = $('#eventBox').html();
+                console.log(a);
+            });
+        });
+        
+    </script> -->
+<!-- 
+    Note:
+    1. ab yaha ap dekh pa rhe hoge - click() mouse event se single click me div box ka color change ho raha hai.
+    2. dblclick() mouse event me double click se div box ka color change ho raha hai.
+
+    <script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                $('#eventBox').css('background-color','red');
+            });
+
+
+            $('#eventBox').dblclick(function(){
+                $('#eventBox').css('background-color','orange');
+            });
+        });
+        
+    </script> -->
+
+
+    <!-- Note:
+    1. Ap dekh pa rhe ho contextmenu() mouse event me jab ap apne mouse me div box pr right click krte time div box ka color change ho raha hai.
+
+    <script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                $('#eventBox').css('background-color','red');
+            });
+
+
+            $('#eventBox').dblclick(function(){
+                $('#eventBox').css('background-color','orange');
+            });
+
+
+            $('#eventBox').contextmenu(function(){
+                $('#eventBox').css('background-color','blue');
+            });
+        });
+        
+    </script> -->
+<!-- 
+Note : 
+    1. Apne dekha ki kaise mouseenter() mouse event kaam krta ap jab mouse ko div k box pr lekr gye the to div box ka color change ho gya tha.
+
+    <script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                $('#eventBox').css('background-color','red');
+            });
+
+
+            $('#eventBox').dblclick(function(){
+                $('#eventBox').css('background-color','orange');
+            });
+
+
+            $('#eventBox').contextmenu(function(){
+                $('#eventBox').css('background-color','blue');
+            });
+
+           $('#eventBox').mouseenter(function(){
+            $('#eventBox').css('background-color','green');
+           });
+        });
+        
+    </script> -->
+
+
+    Note : Ap dekh pa rhe hoge jab ap mouseleave() mouse event ka use kr rhe the to issa kya ho raha tha ki jab ap mouse div box se hata rhe the to div ka color change ho ja raha tha.
+
+    <script>
+        $(document).ready(function(){
+            $('#eventBox').click(function(){
+                $('#eventBox').css('background-color','red');
+            });
+
+
+            $('#eventBox').dblclick(function(){
+                $('#eventBox').css('background-color','orange');
+            });
+
+
+            $('#eventBox').contextmenu(function(){
+                $('#eventBox').css('background-color','blue');
+            });
+
+           $('#eventBox').mouseenter(function(){
+            $('#eventBox').css('background-color','green');
+           });
+
+           $('#eventBox').mouseleave(function(){
+            $('#eventBox').css('background-color','purple');
+           });
+        });
+        
+    </script>
+</body>
+</html>

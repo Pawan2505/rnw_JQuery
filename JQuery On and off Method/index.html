@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery On() and Off() Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        .boxbg {
+            background-color: coral;
+        }
+
+        #heading {
+            text-align: center;
+        }
+
+        #container {
+            border: 1px solid black;
+            background-color: antiquewhite;
+            margin: 100px auto;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">JQuery On() and Off() Method</h1>
+
+    <div id="container">
+        <h1 class="text"> On() and Off() Method</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit ad fuga tenetur omnis consectetur
+            temporibus iste. Consequatur, alias. Veniam.</p>
+    </div>
+
+    <!-- Below button working for last code ok -->
+    <button id="removebutton">Revove Event</button>
+
+    <!-- Note : 
+        1. Jab ham container box pr click krte hai to box ka background color change ho jata hai. -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#container').on("click", function(){
+                $(this).css("background","orange");
+            })
+        });
+    </script> -->
+
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#container h1').on("mouseover mouseout", function(){
+                $(this).toggleClass("boxbg");
+            })
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+          $('#container').on({
+            "click" : function(){
+                $(this).css("background","orange");
+            },
+            "mouseover": function(){
+                $(this).css("background","blue");
+            },
+            "mouseout" : function(){
+                $(this).css("background","pink");
+            }
+          });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+            $(document).ready(function () {
+                $('#container').on({
+                    "click": function () {
+                        $(this).css("background", "orange");
+                    },
+                    "mouseover": function () {
+                        $(this).css("background", "blue");
+                    },
+                    "mouseout": function () {
+                        $(this).css("background", "pink");
+                    }
+                });
+            });
+
+            // below code se mouseout and mouseover k function work nhi krenge
+
+            $("button").click(function () {
+                $('#container').off("mouseover mouseout")
+            });
+        });
+    </script>
+</body>
+
+</html>

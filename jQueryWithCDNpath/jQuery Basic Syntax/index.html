@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Basic Syntax</title>
+    <style>
+#container{
+    margin-left: 300px;
+    display: flex;
+    text-align: center;
+}
+#heading{
+    text-align: center;
+}
+#test1{
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+#test2{
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+    border: 1px solid black;
+    background-color: brown;
+}
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">JQuery Basic Syntax</h1>
+    <div id="container">
+        
+        <div id="test1">
+            <h2>JQuery Box1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quaerat.</p>
+        </div>
+
+        <div id="test2">
+            <h2>JQuery Box2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, quaerat.</p>
+        </div>
+    </div>
+
+
+<script src="./jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // console.log("Hello");
+    var a = $('#test1').html();
+    console.log(a);
+
+    var b = $('#test2').html();
+    console.log(b);
+    });
+</script>
+
+</body>
+
+</html>

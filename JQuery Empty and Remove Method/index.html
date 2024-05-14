@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Empty and Remove Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            margin: 100px;
+        }
+        #heading {
+            text-align: center;
+        }
+
+        #container {
+            border: 1px solid black;
+            background-color: antiquewhite;
+            margin: 50px auto;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">JQuery Empty and Remove Method</h1>
+    <div id="container">
+        <h1 class="text">After and Before</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit ad fuga tenetur omnis consectetur
+            temporibus iste. Consequatur, alias. Veniam.</p>
+    </div>
+    <button id="emptybtn">Empty</button>
+    <button id="removebtn">Remove</button>
+
+    <!-- <script>
+        $(document).ready(function () {
+            $('#emptybtn').click(function () {
+                $('#container').empty();
+            });
+
+            $('#removebtn').click(function () {
+                $('#container').remove();
+            });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function () {
+            $('#emptybtn').click(function () {
+                $('#container h1').empty();
+            });
+
+            $('#removebtn').click(function () {
+                $('#container').remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

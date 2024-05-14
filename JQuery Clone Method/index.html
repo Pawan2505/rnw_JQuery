@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Clone Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        #heading{
+            text-align: center;
+        }
+        #container1{
+            margin: 10px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: bisque;
+            height: 200px;
+        }
+        #container2{
+            margin: 10px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: bisque;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">JQuery Clone Method</h1>
+    <div id="container1">
+        <h1>Container One</h1>
+        <p>
+            This is paragraph one.
+        </p>
+    </div>
+    <div id="container2">
+      
+        <h1>Clone</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, nostrum aspernatur aliquam eum repellendus
+            quos! Dolores suscipit officia architecto sint!</p>
+    </div>
+    <button id="clonebtn">Clone</button>
+
+    <!-- <script>
+        $(document).ready(function(){
+           $('#clonebtn').click(function(){
+            $('#container1').clone().prependTo('#container');
+           });
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+           $('#clonebtn').click(function(){
+            $('#container1 h1').clone().prependTo('#container2 h1');
+           });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+           $('#clonebtn').click(function(){
+            $('#container1 h1').clone().appendTo('#container2 h1');
+           });
+        });
+    </script>
+</body>
+
+</html>

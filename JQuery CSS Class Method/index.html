@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery CSS Class Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        #heading{
+            text-align: center;
+            color: blue;
+        }
+        #container{
+            border: 1px solid black;
+            height: 200px;
+            background-color: aliceblue;
+            text-align: center;
+        }
+
+        .first{
+            background-color: rgb(210, 140, 186);
+        }
+
+        .second{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+   <h1 id="heading">JQuery Class Method</h1> 
+
+   <div id="container">
+    <h2>Class Method Box</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere omnis sed repellat cum odio reiciendis, modi repudiandae nisi sint autem.</p>
+   </div>
+   <br>
+   <br>
+   <button id="addbutton">Add Class</button>
+   <button id="removebutton">Remove Class</button>
+   <button id="togglebutton">Toggle Class</button>
+   
+   <script>
+    $(document).ready(function(){
+
+// YAHA cLASS ADD HO RAHA HAI AUR HEADING ME BACKGROUND COLOR DIKH RAHA HAI
+
+        $('#addbutton').click(function(){
+            $('#container h2').addClass("first second");
+        });
+
+
+        // YAHA JO UPER BACKGROUND COLOR LAGA THA USE REMOVE KR RHE HAI
+        $('#removebutton').click(function(){
+            $('#container h2').removeClass("second");
+        });
+
+        $('#togglebutton').click(function(){
+            $('#container h2').toggleClass("second");
+        });
+    });
+   </script>
+</body>
+</html>

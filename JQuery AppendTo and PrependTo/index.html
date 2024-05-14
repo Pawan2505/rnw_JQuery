@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery AppendTo and PrependTo</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+          #heading {
+        text-align: center;
+    }
+
+    #container {
+        border: 1px solid black;
+        background-color: antiquewhite;
+        margin: 50px auto;
+        padding: 50px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JQuery AppendTo and PrependTo</h1>
+
+       <div id="container">
+        <h1 class="text">AppendTo and PrependTo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit ad fuga tenetur omnis consectetur
+            temporibus iste. Consequatur, alias. Veniam.</p>
+    </div>
+    <button id="appendtobtn">AppendTo</button>
+    <button id="prependtobtn">PrependTo</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#appendtobtn').click(function(){
+                $('<h1>This is AppendTo</h1><p>This is para</p>').appendTo('#container');
+            })
+
+            $('#prependtobtn').click(function(){
+                $('<h1>This is PrependTo</h1>').prependTo('#container');
+            })
+        });
+    </script>
+</body>
+</html>

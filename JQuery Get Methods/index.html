@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Get Methods</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    #heading {
+        text-align: center;
+    }
+
+    #container {
+        border: 1px solid black;
+        background-color: antiquewhite;
+        margin: 100px auto;
+        padding: 50px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- Topics:
+        1. .text()
+        2. .html()
+        3. .attr()
+        4. .val() -->
+
+    <h1 id="heading">JQuery Get Method</h1>
+
+    <div id="container">
+        <h1 class="text">Get Methods</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit ad fuga tenetur omnis consectetur
+            temporibus iste. Consequatur, alias. Veniam.</p>
+    </div>
+
+    <form action="" id="sform">
+        <label for="">Name : </label>
+        <input type="text" id="name"> <br>
+        <label for="">Class : </label>
+        <input type="text" id="className"> <br>
+        <button>Submit</button>
+
+    </form>
+
+    <!-- Note:
+    1. Ap yaha dekh rhe ho jab ap .text() JQuery Get method ka use kiya to isase kya hua apke tag ka jo text tha o
+    Console me print ho gya.
+
+    <script>
+
+        $(document).ready(function () {
+            var a = $('#container').text();
+            console.log(a);
+        });
+
+    </script> -->
+
+
+    <!-- Note :
+    1. Jab Ap .html() JQuery Get Method ka use kiye to kya hua yaha pr ap ka html text apke html tag k sath print ho gya
+    yhi diffrence hai .text() aur .html() me.
+
+    <script>
+
+        $(document).ready(function () {
+            var a = $('#container').html();
+            console.log(a);
+        });
+
+    </script> -->
+
+    <!-- Note : 
+    1. .attr() JQuery Get Method hamne niche use kiya hai uska mtlb ey hai ki us id pr jo class hamne use kiya hai us class ka name hame o de dega.
+
+    <script>
+
+        $(document).ready(function () {
+            var a = $('.text').attr('class');
+            console.log(a);
+        });
+
+    </script> -->
+
+
+    Note :
+    1. .submit() JQuery Get Method ka yaha use kiya hai. Aur jab ham submit pr click krte hai to val() method k vjh se
+    form ka data ham alert me display kara rhe hai.
+
+    <script>
+        $(document).ready(function () {
+            $('#sform').submit(function () {
+                var a = $('#name').val();
+                var b = $('#className').val();
+
+                alert("Hello : " + a + " Class : " + b);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

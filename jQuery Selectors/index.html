@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Selectors</title>
+    <style>
+        #container{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Selectors</h1>
+    <div id="container">
+        <h2>JQuery Box</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, deserunt?
+        </p>
+    </div>
+    <ul id="ulList">
+        <li >Car</li>
+        <li class="list">Bat</li>
+        <li>Boll</li>
+        <li class="list">Mobile</li>
+        <li>Tablet</li>
+    </ul>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#ulList").css("color","red");
+            // $("#ulList").css("border","1px solid blue");
+            // $("#ulList .list").css("border","1px solid blue");
+            // $("#ulList, .list, #container").css("border","1px solid blue");
+            // $("*").css("border","1px solid blue");
+            // $("li:first-child").css("border","1px solid blue");
+            // $("li:last").css("border","1px solid blue");
+            // $("ul li:eq(0)").css("border","1px solid blue");
+            // $("ul li:eq(1)").css("border","1px solid blue");
+            // $("ul li:eq(2)").css("border","1px solid blue");
+            // $("ul li:gt(1)").css("border","1px solid blue");
+            // $("ul li:gt(0)").css("border","1px solid blue");
+            // $("ul li:gt(2)").css("border","1px solid blue");
+        });
+    </script>
+</body>
+</html>

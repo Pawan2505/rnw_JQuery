@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Window Event</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #container {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Topics : JQuery Windows Event-
+        1. .load()  ----- Remove in version 3.0
+        2. .unload() ---- Remove in version 3.0
+        3. .resize()
+        4. .scroll() -->
+
+    <h1>JQuery Window Event.</h1>
+
+    <div id="container">
+        <h1>Windows Event</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia beatae exercitationem voluptas
+            voluptate praesentium et dignissimos, ipsum soluta nostrum atque labore fugiat vel eius, quasi nesciunt
+            dolores sapiente officiis eos, iure odit repellendus eaque aspernatur. Perferendis ipsam molestias nemo
+            aspernatur, quibusdam assumenda dignissimos ab dicta, nihil iste minus nulla?</p>
+    </div>
+    <p>Lorem ipsum Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima optio itaque, illo nostrum voluptate
+        non quia ipsam voluptates fugiat iure nisi tempora illum, doloremque ducimus! Eaque, laborum adipisci!
+        Dignissimos, tempora blanditiis illo porro odio, laborum nesciunt explicabo recusandae, sapiente quae voluptates
+        minima saepe tempore? Nihil, inventore autem repellendus consequuntur sapiente temporibus. Asperiores doloremque
+        porro sed laborum vel, sequi, magni eum reprehenderit maxime voluptas quae. Facilis optio excepturi, inventore
+        neque reprehenderit eaque beatae placeat tempora consequatur labore et voluptatum quo dolor tempore provident
+        architecto! Commodi ratione asperiores corrupti distinctio quas ullam nam atque, natus, facilis velit excepturi?
+        Fugit numquam laborum error est eius voluptatum eos ducimus totam voluptatem aspernatur hic repudiandae fugiat
+        animi minus corporis officiis quae aliquam voluptas placeat nulla mollitia, consequuntur repellendus nihil.
+        Molestiae itaque sit, laboriosam esse qui praesentium voluptatibus odio facilis eius, repellendus dolorum
+        accusamus blanditiis, illo reiciendis sed sapiente minus placeat repudiandae voluptatum unde ipsam eos quibusdam
+        nobis. Non suscipit alias recusandae nam assumenda, ad doloribus fugit officiis porro voluptatibus id accusamus,
+        quod tempora consequatur omnis qui. Ipsam pariatur animi, in saepe voluptatum esse a minima molestiae quod,
+        nesciunt deserunt consequatur fugiat dolorem eius repellendus nihil? Voluptates nesciunt unde optio cupiditate.
+        Facere itaque temporibus incidunt quasi distinctio ipsam, labore nam provident perferendis officiis! Tempora,
+        ratione modi ducimus ullam aspernatur reprehenderit est quod officiis assumenda sit eaque earum nostrum impedit,
+        laudantium, maxime dolorem eligendi rerum fuga quam cumque veritatis numquam eos. Pariatur alias quibusdam,
+        doloremque inventore nobis magni dolor, itaque facilis, eum animi commodi atque accusantium harum quisquam fuga
+        nemo a! Totam odio ut delectus error labore et nesciunt, nostrum possimus voluptates, consequuntur, dolorum
+        deleniti quia placeat dolores illo laboriosam architecto voluptatibus quod sapiente? Aliquid necessitatibus,
+        voluptatum omnis quam eius porro sequi obcaecati beatae dolorum sapiente rem rerum natus at molestias molestiae
+        sit velit pariatur, quaerat saepe dolores? Facilis alias itaque accusamus reprehenderit quidem dolorum maiores
+        vitae excepturi aperiam eum. Nemo fugit inventore quos mollitia, commodi dolorem placeat itaque voluptatem
+        dicta? Architecto dignissimos aperiam rem impedit fugit eligendi, quos nisi sed veniam saepe quo, consequuntur
+        officiis possimus placeat, unde est porro. Distinctio quasi, nam vel dolor est facere perferendis deserunt
+        quibusdam soluta sit molestias adipisci quaerat qui veniam error expedita fugiat quia reprehenderit nulla
+        quisquam natus nihil! Perspiciatis, dolorum? Possimus magni enim veniam accusantium quas! Eaque laborum aliquid
+        optio corrupti libero tempore, nisi praesentium perferendis harum est officia non voluptatibus, suscipit in
+        magni? Laborum error quas vel.dolor sit amet consectetur, adipisicing elit. Et delectus debitis commodi officiis
+        doloremque accusantium porro necessitatibus optio! Porro, beatae.</p>
+
+
+    <!-- Note : 
+            1. Ap ne jab scroll() window event use kiya to ap dekh pa rhe hoge jab ap window ko scroll kr rhe the to consloe me prind ho raha tha you are scrolling. 
+    
+    <script>
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    console.log("You are scrolling");
+                });
+            });
+        </script> -->
+
+    <!-- 
+    Note :
+    1. Ab jab ap ne scroll() window event ka use container box pr kiya aur jab ap container box ko ap scroll kr rhe the
+    to ap dekh pa rhe the ki apke console me print ho raha tha you are scrolling . ab agr ap sirf window ko scroll kroge
+    to apke console me kuchh print nhi hoga.
+
+    <script>
+        $(document).ready(function () {
+            $('#container').scroll(function () {
+                console.log("You are scrolling");
+            });
+        });
+    </script> -->
+
+
+    <!-- Note :
+    1. Ap yaha dekh pa rhe hoge ki jab ap resize() window event apne use kiya to kya hua - jab ap apne window ko
+    increase and decrease kr rhe the to apke consolwe me print ho raha tha you are resizing your window.
+
+    <script>
+        $(document).ready(function () {
+            $(window).resize(function () {
+                console.log("You are resizing window");
+            });
+        });
+    </script> -->
+
+
+Note :
+    1. unload() and load() window event not working in latest version.
+
+    <script>
+      $(document).ready(function(){
+        $(window).unload(function(){
+            console.log("You are unload window");
+        })
+
+
+        $(window).load(function(){
+            console.log("You are load window");
+        })
+      });
+    </script>
+
+</body>
+
+</html>

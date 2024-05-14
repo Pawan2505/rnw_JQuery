@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery CSS() Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+#firstheading{
+    text-align: center;
+    color: blueviolet;
+}
+        #container{
+            height: 200px;
+            text-align: center;
+            padding: 50px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="firstheading">Jquery CSS Method</h1>
+
+    <div id="container">
+        <h1 id="heading">CSS Method BoX</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, totam!</p>
+    </div>
+<br>
+<br>
+    <button id="addbutton">Add Style</button>
+
+    <script>
+        $(document).ready(function(){
+           $('#addbutton').click(function(){
+            $('#container').css({"background-color":"pink", "color":"red"});           });
+        })
+    </script>
+</body>
+</html>

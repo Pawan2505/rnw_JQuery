@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Set Method</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        #heading {
+            text-align: center;
+        }
+
+        #container {
+            border: 1px solid black;
+            height: 200px;
+            text-align: center;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">JQuery Set Method.</h1>
+
+    <div id="container">
+        <h1 id="changeHeading">JQuery Set Method</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, commodi.</p>
+    </div>
+    <br>
+    <button id="clickbutton">Set Value</button>
+<br>
+<br>
+<br>
+
+    <form action="" id="sform">
+        <label>Name : </label>
+        <input type="text" id="sname"><br/>
+        <label>Class : </label>
+        <input type="text" id="sclass"><br/>
+        <button>Save</button>
+    </form>
+
+    <!-- Note : 
+        1. yaha ham kya kr rhe hai button k click hone pr div k headining ka text change kr rhe hai. mtlb .text() set method k help se heding me content set kr rhe hai.
+
+    <script>
+        $(document).ready(function () {
+            $('#clickbutton').click(function () {
+                $('#container h1').text("Hell Your Heading is Change");
+            });
+        });
+    </script> -->
+
+
+    <!-- Note :
+    1. jab ham yaha button ko click kr rhe hai to heding aur paragraph dono ka content change ho raha hai .text() JQuery
+    Set Method se.
+
+    <script>
+        $(document).ready(function () {
+
+            $('#clickbutton').click(function () {
+                $('#container h1').text("Your Heading is Nice.")
+            });
+
+            $('#clickbutton').click(function () {
+                $('#container p').text("Your text is good.")
+            });
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#clickbutton').click(function () {
+                $('#container h1').text("Your <b> Heading </b> is Nice.")
+            });
+
+            $('#clickbutton').click(function () {
+                $('#container p').html("Your <b> text </b> is good.")
+            });
+            
+        });
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#clickbutton').click(function (){
+                $('#container h1').addClass("blue"); // Use addClass method to add the class
+            });
+        });
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+            $('#sname').val("Pawan Maurya");
+            $('#sclass').val("second");
+        });
+    </script>
+
+</body>
+
+</html>

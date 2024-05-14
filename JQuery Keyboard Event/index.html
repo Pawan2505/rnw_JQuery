@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Keyboard Events</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <style>
+        #key{
+            border: 1px solid black;
+            height: 200px;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- Topics:
+        1. .keypress()
+        2. .keydown()
+        3. .keyup() -->
+
+        <h1>JQuery keyboard Events</h1>
+        <div id="key">
+            <h1>Hellow World!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur?</p>
+        </div>
+
+        <!-- Note :
+        1. Ap dekh skte ho yaha jab hamne keypress() JQuery keyboard event ka use kiya aur jab ap apne interface pr aa kr key press krte ho to apke screen ka background color change ho jata hai!
+       
+       <script>
+            $(document).ready(function(){
+                $('body').keypress(function(){
+                    $(this).css('background-color','orange');
+                })
+            });
+        </script> -->
+
+<!-- 
+        Note :
+            1. Jab ap keyup() keyboard event use kroge to ap dekhoge ki ap jaise key press kr k hath uper kiya apke screen ka background color change ho jayega.
+        
+            <script>
+            $(document).ready(function(){
+                $('body').keypress(function(){
+                    $(this).css('background-color','orange');
+                })
+
+                $('body').keyup(function(){
+                    $(this).css('background-color','green');
+                })
+            });
+        </script> -->
+
+        Note: Jab ap keydown() keyboard event ka use kiye to aap dekh paye ki ap jab key ko down press kiye to apke screen k background color change ho gye.
+
+        <script>
+            $(document).ready(function(){
+                // $('body').keypress(function(){
+                //     $(this).css('background-color','orange');
+                // })
+                
+                $('body').keyup(function(){
+                    $(this).css('background-color','green');
+                })
+
+                $('body').keydown(function(){
+                    $(this).css('background-color','blue');
+                });
+            });
+        </script>
+</body>
+</html>
